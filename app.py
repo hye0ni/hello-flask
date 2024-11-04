@@ -5,9 +5,17 @@ app = Flask(__name__)
 def hello():
     return 'Hello, World!'
 
+@app.route('/baseball')
+def baseball():
+    return 'Hello, baseball!'
+
 @app.route('/naver')
 def naver():
     return render_template('naver.html')
+
+@app.route('/youtube')
+def youtube():
+    return render_template('youtube.html')
 
 @app.route('/method', methods=['GET', 'POST'])
 def method():
